@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+password_guess = st.text_input('What is the Password?')
+if password_guess != 'streamlit_password':
+  st.stop()
 
 st.title("Palmer's Penguins")
 st.markdown("Use this Streamlit app to make your own scatterplot about penguins!")
